@@ -9,7 +9,9 @@ export default class RandomPlanet extends Component {
   swapiService = new SwapiService();
 
   state = {
-    planet: {}
+    planet: {
+
+    }
   };
 
   constructor() {
@@ -22,7 +24,7 @@ export default class RandomPlanet extends Component {
   };
 
   updatePlanet() {
-    const id = 12;
+    const id = Math.floor(Math.random()*25)+2;
     this.swapiService
       .getPlanet(id)
       .then(this.onPlanetLoaded);

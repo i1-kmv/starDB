@@ -17,13 +17,6 @@ const withChildFunction = (Wrapped, fn) => {
 
 const renderName = ({name}) => <span>{name}</span>
 
-const renderModelAndName = ({model, name}) => <span> {name} ({model})</span>
-
-const ListWithChildren = withChildFunction(
-    ItemList,
-    ({ name }) => <span>{name}</span>
-)
-
 const mapPersonMethodToProps = (swapiService) => {
     return {
         getData: swapiService.getAllPeople

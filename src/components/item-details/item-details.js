@@ -33,7 +33,7 @@ export default class ItemDetails extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.itemId !== prevProps.itemId) {
+    if (this.props.itemId !== prevProps.itemId || this.props.getImageUrl !== prevProps.getImageUrl || this.props.getData !== prevProps.getData) {
       this.updateItem();
     }
   }
